@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: webapp
-        image: your-dockerhub-username/demo-webapp:latest  # Replace with your actual image
+        image: rajneeshmahala/flaskfrntnd:latest
         env:
         - name: DB_HOST
           value: "mysql-service"
