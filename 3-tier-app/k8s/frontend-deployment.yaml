@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: rajneeshmahala/frontenddevx:latest
+        image: rajneeshmahala/frontenddevx:v1
         ports:
         - containerPort: 80
 ---

@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: rajneeshmahala/backenddevx:latest
+        image: rajneeshmahala/backenddevx:v1
         env:
         - name: DB_HOST
           value: "mysql-service"
