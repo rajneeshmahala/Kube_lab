@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend</title>
+</head>
+<body>
+    <h1>Welcome to the Frontend</h1>
+    <p>Click below to fetch data from the backend:</p>
+    <button onclick="fetchData()">Fetch Data</button>
+    <pre id="data"></pre>
+
+    <script>
+        function fetchData() {
+            fetch('/api/')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('data').textContent = data;
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+        }
+    </script>
+</body>
+</html>
