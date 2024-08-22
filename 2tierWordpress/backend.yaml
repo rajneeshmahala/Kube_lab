@@ -7,7 +7,8 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 50Mi
+      storage: 1Gi
+  storageClassName: standard
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -32,11 +33,11 @@ spec:
         - name: MYSQL_ROOT_PASSWORD
           value: "rootpassword"
         - name: MYSQL_DATABASE
-          value: "demodb"
+          value: "wordpress"
         - name: MYSQL_USER
-          value: "demouser"
+          value: "wordpressuser"
         - name: MYSQL_PASSWORD
-          value: "demopassword"
+          value: "wordpresspassword"
         ports:
         - containerPort: 3306
         volumeMounts:

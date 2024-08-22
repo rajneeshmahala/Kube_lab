@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: webapp
-        image: rajneeshmahala/flaskfrntnd:latest
+        image: rajneeshmahala/flaskfrntnd:v1
         env:
         - name: DB_HOST
           value: "mysql-service"
