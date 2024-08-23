@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: httpd-deployment
+  labels:
+    app: httpd
+spec:
+  replicas: 1  # Initial replica count
+  selector:
+    matchLabels:
+      app: httpd
+  template:
+    metadata:
+      labels:
+        app: httpd
+    spec:
+      containers:
+      - name: httpd
+        image: httpd:latest
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            cpu: "50m"    # Request 50 millicores of CPU
+            memory: "64Mi"  # Request 64Mi of memory
+          limits:
+            cpu: "100m"   # Limit CPU usage to 100 millicores
+            memory: "128Mi" # Limit memory usage to 128Mi
