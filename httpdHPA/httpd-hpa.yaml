@@ -17,4 +17,6 @@ spec:
         type: Utilization
         averageUtilization: 10  # Very low threshold to trigger scaling
 
+
+
         
